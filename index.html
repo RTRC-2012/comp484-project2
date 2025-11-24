@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Your Giga Pet</title>
-    <meta name="description" content="A cool thing made with Glitch">
+    <title>Worse Webkinz</title>
+    <meta name="description" content="insipired by a childhood memory">
     <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,19 +13,28 @@
   <body>
     <header>
       <h1>
-        This is your Giga Pet
+        this is like Webkinz but worse
       </h1>
     </header>
 
+    <!-- Name Request -->
+    <div id="name-overlay" class="overlay">
+      <div class="overlay-content">
+        <h2>Name your Webkinz:</h2>
+        <input type="text" id="name-input" placeholder="Enter Name" />
+        <button id="name-submit">Confirm</button>
+      </div>
+    </div>
+
     <main>
       <section class="pet-image-container">
-         <!-- Replace pet image with your own pet image -->
-        <img class="pet-image" src="https://cdn.glitch.com/3aa98e05-3216-497c-a251-210ae4713a83%2Fhound.jpg?1541715339220">
+         <!-- my own pet image -->
+        <img class="pet-image" src="https://static.wikia.nocookie.net/webkinz/images/f/fe/Leopard_transparent.png/revision/latest?cb=20220201013852">
       </section>
       <section class="dashboard">
         <div>Name: <strong><span class="name"></span></strong></div>
         <div>Weight: <strong><span class="weight"></span> pounds</strong></div>
-        <div>Happiness: <strong><span class="happiness"></span> tail wags (per min)</strong></div>
+        <div>Happiness: <strong><span class="happiness"></span> smiles per minute</strong></div>
         <div class="button-container">
           <button class="treat-button">
             Treat
@@ -36,11 +45,14 @@
           <button class="exercise-button">
             Exercise
           </button>
+          <!-- new Medicine function to bring pet back to life -->
+          <button class="heal-button">
+            Medicine
+          </button>
         </div>
       </section>
     </main>
 
-    <!-- Your web-app is https, so your scripts need to be too -->
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"
             integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
             crossorigin="anonymous"></script>
