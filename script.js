@@ -32,10 +32,10 @@ petImg.css({ 'max-width': '200px', 'max-height': '200px', 'height': '200px'});
     function clickedTreatButton() {
     if(pet_info.isDead != true)
     {
-      petImg.addClass("eat").attr("src", "https://static.wikia.nocookie.net/webkinz/images/9/92/Leopardfood.png/revision/latest?cb=20250727192830").css({ 'max-width': '200px', 'max-height': '200px', 'height': '200px' });
+      petImg.addClass("eat").attr("src", "images/Leopardfood.webp").css({ 'max-width': '200px', 'max-height': '200px', 'height': '200px' });
   // after 3/4 seconds
     setTimeout(() => 
-    {petImg.removeClass("eat").attr("src", "https://static.wikia.nocookie.net/webkinz/images/f/fe/Leopard_transparent.png/revision/latest?cb=20220201013852").css({ 'max-width': '200px', 'max-height': '200px', 'height': '200px' });
+    {petImg.removeClass("eat").attr("src", "images/Leopard_transparent.webp").css({ 'max-width': '200px', 'max-height': '200px', 'height': '200px' });
           pet_info.happiness += 0.5;
           pet_info.weight += 1;
           checkAndUpdatePetInfoInHtml();
@@ -47,10 +47,10 @@ petImg.css({ 'max-width': '200px', 'max-height': '200px', 'height': '200px'});
     function clickedPlayButton() {
     if(pet_info.isDead != true)
     {
-      petImg.addClass("play").attr("src", "https://static.wikia.nocookie.net/webkinz/images/b/b6/SoftSpotsCover.png/revision/latest?cb=20200828175624").css({ 'max-width': '200px', 'max-height': '200px', 'height': '200px' });
+      petImg.addClass("play").attr("src", "images/SoftSpotsCover.webp").css({ 'max-width': '200px', 'max-height': '200px', 'height': '200px' });
   // after 5/4 seconds
     setTimeout(() => 
-    {petImg.removeClass("play").attr("src", "https://static.wikia.nocookie.net/webkinz/images/f/fe/Leopard_transparent.png/revision/latest?cb=20220201013852").css({ 'max-width': '200px', 'max-height': '200px', 'height': '200px' });
+    {petImg.removeClass("play").attr("src", "images/Leopard_transparent.webp").css({ 'max-width': '200px', 'max-height': '200px', 'height': '200px' });
           pet_info.happiness += 1.25;
           pet_info.weight -= 0.5;
           checkAndUpdatePetInfoInHtml();
@@ -62,10 +62,10 @@ petImg.css({ 'max-width': '200px', 'max-height': '200px', 'height': '200px'});
     function clickedExerciseButton() {
     if(pet_info.isDead != true)
     {
-      petImg.addClass("exercise").attr("src", "https://static.wikia.nocookie.net/webkinz/images/b/b0/Leopard_240.gif/revision/latest?cb=20250514010822").css({ 'max-width': '200px', 'max-height': '200px' , 'height': '200px' });
+      petImg.addClass("exercise").attr("src", "images/Leopard_240.webp").css({ 'max-width': '200px', 'max-height': '200px' , 'height': '200px' });
   // after 1 second
     setTimeout(() => 
-    {petImg.removeClass("exercise").attr("src", "https://static.wikia.nocookie.net/webkinz/images/f/fe/Leopard_transparent.png/revision/latest?cb=20220201013852").css({ 'max-width': '200px', 'max-height': '200px', 'height': '200px' });
+    {petImg.removeClass("exercise").attr("src", "images/Leopard_transparent.webp").css({ 'max-width': '200px', 'max-height': '200px', 'height': '200px' });
           pet_info.happiness -= 2;
           pet_info.weight -= 1.5;
           checkAndUpdatePetInfoInHtml();
@@ -80,7 +80,7 @@ petImg.css({ 'max-width': '200px', 'max-height': '200px', 'height': '200px'});
       petImg.addClass("heal").attr("src", "images/R218-July-Challenge.png").css({ 'max-width': '200px', 'max-height': '200px', 'height': '200px' });
   // after 2 seconds
     setTimeout(() => 
-    {petImg.removeClass("heal").attr("src", "https://static.wikia.nocookie.net/webkinz/images/f/fe/Leopard_transparent.png/revision/latest?cb=20220201013852").css({ 'max-width': '200px', 'max-height': '200px', 'height': '200px' });
+    {petImg.removeClass("heal").attr("src", "images/Leopard_transparent.webp").css({ 'max-width': '200px', 'max-height': '200px', 'height': '200px' });
           pet_info.isDead = false;
           pet_info.happiness = 0.25;
           pet_info.weight = 1;
@@ -90,8 +90,10 @@ petImg.css({ 'max-width': '200px', 'max-height': '200px', 'height': '200px'});
   }}
   //// new Medicine function to bring pet back to life
 
+// // recreates an actual error I made when making this for the first time
     function checkAndUpdatePetInfoInHtml() {
-    if (pet_info.weight > 0 && pet_info.weight <= 15) {
+    if //(pet_info.weight > 0 && pet_info.weight <= 15) {
+        (pet_info.weight > 0 || pet_info.weight <= 15) {
         updatePetInfoInHtml();}
       // if weight hits zero or reaches 15
     else if (pet_info.weight <= 0)
