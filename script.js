@@ -90,10 +90,8 @@ petImg.css({ 'max-width': '200px', 'max-height': '200px', 'height': '200px'});
   }}
   //// new Medicine function to bring pet back to life
 
-// // recreates an actual error I made when making this for the first time
     function checkAndUpdatePetInfoInHtml() {
-    if //(pet_info.weight > 0 && pet_info.weight <= 15) {
-        (pet_info.weight > 0 || pet_info.weight <= 15) {
+    if (pet_info.weight > 0 || pet_info.weight <= 15) {
         updatePetInfoInHtml();}
       // if weight hits zero or reaches 15
     else if (pet_info.weight <= 0)
